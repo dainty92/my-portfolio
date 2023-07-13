@@ -73,7 +73,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #acc;
+    background-color: #47CF73;
 }
   
   
@@ -123,7 +123,7 @@ p {
 }
   
 .cta-button:hover {
-    background-color: #666;
+    background-color: #47CF73;
 }
 
 .socials {
@@ -245,7 +245,7 @@ p {
 }
 
 .navigation-button:hover {
-    background-color: #7fca82;
+    background-color: #666;
 }
 
 /* Skills Section Styles */
@@ -330,7 +330,7 @@ p {
 }
 
 .contact-content button:hover {
-    background-color: #75b477;
+    background-color: #47CF73;
 }
 
   
