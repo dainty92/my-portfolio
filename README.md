@@ -103,16 +103,16 @@ Usage:
 
 Here are some screenshots of my portfolio:
 
-![Home Section](screenshots/home.png)
+![Home Section](/screenshots/home.png)
 *Description: This is the home section of my portfolio showcasing the hero image and introduction.*
 
-![About Me Section](screenshots/about-me.png)
+![About Me Section](/screenshots/about-me.png)
 *Description: This is the about me section of my portfolio with a briefing about me.*
 
-![Projects Section](screenshots/projects.png)
+![Projects Section](/screenshots/projects.png)
 *Description: This is the projects section displaying a grid of my recent projects.*
 
-![Contact Section](screenshots/contact.png)
+![Contact Section](/screenshots/contact.png)
 *Description: This is the contact section where visitors can fill out the form to get in touch.*
 
 ## Contact
