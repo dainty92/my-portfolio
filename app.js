@@ -1,25 +1,18 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Serve static files from the "public" directory
 app.use(express.static('public'));
-
-// Enable CORS for all routes
 app.use(cors());
 
-// POST route for the contact form
 app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
-
-  // Check if the required fields are present
-  if (!name || !email || !message) {
-    return res.status(400).send('Missing required fields');
-  }
 
   // Create a transporter using your email service credentials
   const transporter = nodemailer.createTransport({
@@ -50,7 +43,6 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-// Start the server
 app.listen(5000, () => {
   console.log('Server is running on port 5000');
 });
