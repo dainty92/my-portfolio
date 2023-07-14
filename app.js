@@ -11,7 +11,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
-app.use(cors());
+app.use(cors({
+  origin: 'https://esthercoders.netlify.app',
+}));
 
 app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
