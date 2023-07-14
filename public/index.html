@@ -145,7 +145,7 @@
             <h2>Contact Me</h2>
             <p>If you have any inquiries or would like to discuss potential collaboration opportunities, please feel free to reach out to me using the form below:</p>
           
-            <form method="POST" id="contact-form" action="/send-email" enctype="application/x-www-form-urlencoded" type="submit" value="submit">
+            <form method="POST" id="contact-form" action="send-email" type="submit" value="submit">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -204,7 +204,7 @@
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(data),
+                    body: new URLSearchParams(data),
                 })
                 .then(response => response.text())
                 .then(message => {
