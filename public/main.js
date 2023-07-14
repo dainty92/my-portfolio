@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function showPreviousProjects() {
         currentProjectIndex -= 3;
         if (currentProjectIndex < 0) {
-            currentProjectIndex = Math.max(0, projects.length - (projects.length % 4));
+            currentProjectIndex = Math.max(0, projects.length - 3);
         }
         showCurrentProjects();
     }

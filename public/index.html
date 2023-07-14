@@ -184,8 +184,8 @@
         <p>&copy; 2023 Esther Ajayi's Portfolio</p>
     </footer>
 
-    <script src="main.js"></script>
     <script src="../app.js"></script>
+    <script src="main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const contactForm = document.getElementById("contact-form");
@@ -197,7 +197,7 @@
                 const data = Object.fromEntries(formData.entries());
 
                 // Update the API endpoint URL
-                const apiUrl = 'https://esthercoders.netlify.app';
+                const apiUrl = 'https://esthercoders.onrender.com';
 
                 fetch(`${apiUrl}/send-email`, {
                     method: "POST",
