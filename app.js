@@ -15,6 +15,10 @@ app.use(cors({
   origin: 'https://esthercoders.netlify.app',
 }));
 
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
 
@@ -22,15 +26,24 @@ app.post('/send-email', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'estheradexdainty@gmail.com',
+      user: process.env.EMAIL,
       pass: process.env.EMAIL_PASSWORD,
     },
   });
 
+  // Verify the connection configuration
+transporter.verify(function(error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Server is ready to take our messages');
+  }
+});
+
   // Compose the email message
   const mailOptions = {
     from: email,
-    to: 'estheradexdainty@gmail.com',
+    to: process.env.EMAIL,
     subject: 'New Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
   };
