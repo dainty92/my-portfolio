@@ -196,7 +196,10 @@
                 const formData = new FormData(contactForm);
                 const data = Object.fromEntries(formData.entries());
 
-                fetch("/send-email", {
+                // Update the API endpoint URL
+                const apiUrl = 'https://your-render-server-url.com';
+
+                fetch(`${apiUrl}/send-email`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
