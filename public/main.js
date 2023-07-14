@@ -37,3 +37,80 @@ document.addEventListener("DOMContentLoaded", function() {
 
     showCurrentProjects();
 });
+
+
+/* Contact Form Validation */
+
+    const contactForm = document.getElementById("contact-form");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
+
+    contactForm.addEventListener("submit", function(event) {
+        // Prevent the form from submitting
+        event.preventDefault();
+
+        // Validate the form inputs
+        if (!validateName() || !validateEmail() || !validateMessage()) {
+            return;
+        }
+
+        // Proceed with form submission
+        submitForm();
+    });
+
+    function validateName() {
+        const nameValue = nameInput.value.trim();
+
+        if (nameValue === "") {
+            displayError("name", "Name is required.");
+            return false;
+        }
+
+        // Check the length of the name
+        if (nameValue.length < 2 || nameValue.length > 50) {
+            displayError("name", "Name should be between 2 and 50 characters.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function validateEmail() {
+        const emailValue = emailInput.value.trim();
+
+        if (emailValue === "") {
+            displayError("email", "Email is required.");
+            return false;
+        }
+
+        // Simple email format validation
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        if (!emailRegex.test(emailValue)) {
+            displayError("email", "Invalid email format.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function validateMessage() {
+        const messageValue = messageInput.value.trim();
+
+        if (messageValue === "") {
+            displayError("message", "Message is required.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function displayError(inputName, errorMessage) {
+        const errorElement = document.getElementById(`${inputName}-error`);
+        errorElement.textContent = errorMessage;
+    }
+
+    function submitForm() {
+        // Proceed with form submission
+        contactForm.submit();
+    }

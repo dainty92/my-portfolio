@@ -32,7 +32,7 @@ a {
 header {
     background-color: #767;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -47,7 +47,8 @@ nav {
 }
   
 nav h3 {
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 0;
 }
 
 nav ul {
@@ -88,7 +89,7 @@ section {
     background-position: center;
     background-size: cover;
     color: #333;
-    padding: 142px 30px;
+    padding: 140px 20px;
     text-align: center;
 }
   
@@ -98,16 +99,16 @@ section {
 }
   
 h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 24px;
 }
   
 p {
-    font-size: 16px;
+    font-size: 14px;
     /* margin-bottom: 40px; */
 }
   
@@ -201,6 +202,7 @@ p {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .project:hover {
@@ -256,7 +258,7 @@ p {
   }
   
 .skills-content {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
   
@@ -301,8 +303,15 @@ p {
     margin-bottom: 20px;
 }
 
+.contact-content .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
 .contact-content .social {
-    margin-top: 50px;
+    margin-top: 30px;
 }
   
 .contact-content button {
@@ -363,7 +372,8 @@ footer nav ul li a {
 @media screen and (max-width: 768px) {
     /* Adjust the styles for smaller screens */
     header {
-      padding: 10px;
+      padding: 20px;
+      position: relative;
     }
 
     nav {
@@ -372,7 +382,7 @@ footer nav ul li a {
     }
 
     nav h3 {
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
@@ -470,5 +480,9 @@ footer nav ul li a {
 
     .contact-content .social {
       margin-top: 30px;
+    }
+
+    footer {
+      padding: 20px;
     }
   }

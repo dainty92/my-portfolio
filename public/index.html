@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esther Ajayi's Portfolio">
+    <meta name="keywords" content="developer, backend, software engineer">
     <title>Esther's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/public/styles.css">
 </head>
 <body>
     <header>
@@ -14,12 +16,12 @@
                 <h3>Esther Ajayi</h3>
             </div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+                <li id="home-nav"><a href="#home">Home</a></li>
+                <li id="about-nav"><a href="#about">About Me</a></li>
+                <li id="projects-nav"><a href="#projects">Projects</a></li>
+                <li id="skills-nav"><a href="#skills">Skills</a></li>
+                <li id="contact-nav"><a href="#contact">Contact</a></li>
+            </ul>            
         </nav>
     </header>
     <section id="home">
@@ -52,7 +54,7 @@
     <section id="about">
         <div class="about-content">
             <h2>About Me</h2>
-            <img src="/images/profile-picture.png" alt="Profile Picture" class="profile-picture">
+            <img src="/public/images/profile-picture.png" alt="Profile Picture" class="profile-picture">
             <p>I am a passionate backend developer dedicated to creating robust and scalable systems.</p>
             <p>My experience spans various backend technologies, including Python, JavaScript, and Node.js. I specialize in designing and implementing APIs, managing databases, and optimizing performance.</p>
             <p>Equipped with a strong problem-solving mindset and meticulous attention to detail, I thrive on overcoming complex challenges and delivering efficient solutions.</p>
@@ -66,7 +68,7 @@
             <h2>Projects</h2>
             <div class="projects-wrapper" id="projects-wrapper">
                 <div class="project">
-                    <img src="/images/madam (2).png" alt="Project 1" class="project-image">
+                    <img src="/public/images/madam (2).png" alt="Project 1" class="project-image">
                     <h3>Madam</h3>
                     <p>
                         Madam is a food ordering project that prioritizes developing a seamless application for users to order food from multiple restaurants. 
@@ -75,7 +77,7 @@
                     <a href="https://github.com/cappa-team2/madam-food-app-backend" class="cta-button">View Details</a>
                 </div>
                 <div class="project">
-                    <img src="/images/netflix.png" alt="Project 2" class="project-image">
+                    <img src="/public/images/netflix.png" alt="Project 2" class="project-image">
                     <h3>Netflix</h3>
                     <p>
                         The Netflix Clone project is a web application that replicates the popular streaming platform, Netflix. 
@@ -84,7 +86,7 @@
                     <a href="https://stupendous-douhua-f02eb7.netlify.app/" class="cta-button">View Details</a>
                 </div>
                 <div class="project">
-                    <img src="/images/udemy.png" alt="Project 3" class="project-image">
+                    <img src="/public/images/udemy.png" alt="Project 3" class="project-image">
                     <h3>Udemy</h3>
                     <p> 
                         The Udemy Clone project is a web application inspired by the popular online learning platform, Udemy. 
@@ -93,7 +95,7 @@
                     <a href="https://exquisite-clafoutis-161de1.netlify.app/" class="cta-button">View Details</a>
                 </div>
                 <div class="project">
-                    <img src="/images/todolist.png" alt="Project 4" class="project-image">
+                    <img src="/public/images/todolist.png" alt="Project 4" class="project-image">
                     <h3>To Do List</h3>
                     <p> 
                         The To Do List project is a web application that allows users to efficiently manage their tasks and stay organized. 
@@ -102,7 +104,7 @@
                     <a href="https://comfy-sawine-6a3151.netlify.app/" class="cta-button">View Details</a>
                 </div>
                 <div class="project">
-                    <img src="/images/instagram.png" alt="Project 5" class="project-image">
+                    <img src="/public/images/instagram.png" alt="Project 5" class="project-image">
                     <h3>Instagram</h3>
                     <p>
                         The Instagram Clone project is a web application that aims to replicate the popular social media platform, Instagram.
@@ -111,7 +113,7 @@
                     <a href="https://curious-croquembouche-bb3643.netlify.app/" class="cta-button">View Details</a>
                 </div>
                 <div class="project">
-                    <img src="/images/lionelmessi.png" alt="Project 6" class="project-image">
+                    <img src="/public/images/lionelmessi.png" alt="Project 6" class="project-image">
                     <h3>Lionel Messi Google Search Page</h3>
                     <p>The Lionel Messi Google Search Page Clone project is a web application that recreates the search interface of the popular search engine, Google, with a focus on the renowned football player, Lionel Messi.</p>
                     <a href="https://regal-truffle-98139a.netlify.app/" class="cta-button">View Details</a>
@@ -147,8 +149,13 @@
           
             <form method="POST" id="contact-form" action="send-email" type="submit" value="submit">
                 <input type="text" name="name" placeholder="Your Name" required>
+                <span id="name-error" class="error-message"></span>
+
                 <input type="email" name="email" placeholder="Your Email" required>
+                <span id="email-error" class="error-message"></span>
+
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <span id="message-error" class="error-message"></span>
                 <button type="submit">Send Message</button>
             </form>
             <div class="social">
@@ -184,8 +191,8 @@
         <p>&copy; 2023 Esther Ajayi's Portfolio</p>
     </footer>
 
-    <script src="../app.js"></script>
-    <script src="main.js"></script>
+    <script src="/app.js"></script>
+    <script src="/public/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const contactForm = document.getElementById("contact-form");
@@ -202,9 +209,9 @@
                 fetch(`${apiUrl}/send-email`, {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
+                        "Content-Type": "application/json",
                     },
-                    body: new URLSearchParams(data),
+                    body: JSON.stringify(data),
                 })
                 .then(response => response.text())
                 .then(message => {
