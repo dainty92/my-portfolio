@@ -20,10 +20,6 @@ app.use('/send-email', cors({
   allowedHeaders: ['Content-Type'],
 }));
 
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
 app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
 
@@ -63,6 +59,10 @@ transporter.verify(function(error, success) {
       res.send('Thank you for contacting us!');
     }
   });
+});
+
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 app.listen(5000, () => {
