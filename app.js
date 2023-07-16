@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 // Enable CORS for the relevant route
-app.post('/send-email', cors({
+app.use('/send-email', cors({
   origin: 'https://esthercoders.netlify.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
