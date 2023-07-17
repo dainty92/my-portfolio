@@ -30,7 +30,7 @@ a {
 
 /* Header Styles */
 header {
-    background-color: #767;
+    background-color: rgb(79, 66, 79);
     color: #fff;
     padding: 10px;
     position: fixed;
@@ -88,7 +88,7 @@ section {
     background: url(https://i.pinimg.com/736x/fb/53/e3/fb53e3d5ab5ae9e53b5a04133e837470.jpg);
     background-position: center;
     background-size: cover;
-    color: #333;
+    color:  #1779da;
     padding: 140px 20px;
     text-align: center;
 }
@@ -109,7 +109,6 @@ h2 {
   
 p {
     font-size: 14px;
-    /* margin-bottom: 40px; */
 }
   
 .cta-button {
@@ -146,7 +145,7 @@ p {
 }
 
 .socials a {
-    color: #0A66C2
+    color: #0A66C2;
 }
 
 .socials i {
