@@ -69,7 +69,7 @@ Overall, my portfolio aims to present a professional image, demonstrate my skill
    npm start
    ```
 
-4. Open your browser and visit `http://localhost:5000` to view the portfolio.
+4. Open your browser and visit `https://esthercoders.netlify.app/#contact` to visit the portfolio
 
 ## Usage
 
