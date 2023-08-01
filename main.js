@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById("contact-form");
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
+    const messageInput = document.getElementById("messages");
 
     contactForm.addEventListener("submit", function(event) {
         // Prevent the form from submitting
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const messageValue = messageInput.value.trim();
 
         if (messageValue === "") {
-            displayError("message", "Message is required.");
+            displayError("messages", "Message is required.");
             return false;
         }
 
