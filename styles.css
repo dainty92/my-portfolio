@@ -225,7 +225,31 @@ p {
 .project p {
     font-size: 14px;
     margin-bottom: 20px;
-    color: #666;
+    color: #333;
+}
+
+.backend-highlights {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #c1bfbf;
+  padding-top: 20px;
+}
+
+.backend-highlights h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.backend-highlights ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+.backend-highlights li {
+  margin-bottom: 10px;
 }
 
 .navigation-buttons {
@@ -242,6 +266,7 @@ p {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
     margin: 0 10px;
 }
 
