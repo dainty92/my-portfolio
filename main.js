@@ -1,3 +1,24 @@
+// Highlight the current section in the navigation menu while scrolling
+const sections = document.querySelectorAll("section");
+const navigationLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navigationLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").substring(1) === current) {
+      link.classList.add("active");
+    }
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const previousButton = document.getElementById("previous-btn");

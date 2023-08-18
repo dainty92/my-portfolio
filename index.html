@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding, viewport, and SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Esther Ajayi's Portfolio">
     <meta name="keywords" content="developer, backend, software engineer">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Esther's Portfolio">
+    <meta property="og:description" content="Explore Esther Ajayi's backend development projects and skills.">
+    <meta property="og:image" content="https://esthercoders.netlify.app/screenshots/home.png">
+    <meta property="og:url" content="https://esthercoders.netlify.app">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Esther's Portfolio">
+    <meta name="twitter:description" content="Explore Esther Ajayi's backend development projects and skills.">
+    <meta name="twitter:image" content="https://esthercoders.netlify.app/screenshots/home.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Esther Ajayi",
+      "jobTitle": "Backend Developer",
+      "url": "https://example.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/esther-mustapha-ajayi/",
+        "https://github.com/dainty92",
+        "https://twitter.com/adexdainty92"
+      ]
+    }
+    </script>
     <title>Esther's Portfolio</title>
+
+    <!-- External stylesheet for fonts and styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JHRXBTL14Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JHRXBTL14Y');
+</script>
 </head>
 <body>
+    <!-- Header section with navigation -->
     <header>
         <nav>
+            <!-- Logo and navigation links -->
             <div>
-                <h3>Esther Ajayi</h3>
+                <h3 class="name">
+                    Esther Ajayi
+                    <span class="backend-badge">
+                        <i class="fa fa-cogs"></i> <!-- Use a backend-related icon from Font Awesome -->
+                    </span>
+                </h3>
             </div>
             <ul>
                 <li id="home-nav"><a href="#home">Home</a></li>
@@ -24,49 +75,56 @@
             </ul>            
         </nav>
     </header>
+
+    <!-- Hero section with welcome message and CTA -->
     <section id="home">
         <div class="hero-content">
+            <!-- Welcome message, introduction, and call-to-action -->
             <div>
                 <h1>Welcome to My Portfolio</h1>
                 <p>I'm Esther Ajayi, a backend developer.</p>
                 <a href="#projects" class="cta-button">View Projects</a>
             </div>
             <div class="socials">
+                <!-- Social media links -->
                 <button>
-                    <a href="https://www.linkedin.com/in/esther-mustapha-ajayi/" target="blank">LinkedIn
+                    <a href="https://www.linkedin.com/in/esther-mustapha-ajayi/" target="blank" rel="noopener noreferrer">LinkedIn
                         <i class="fa fa-linkedin-square"></i>
                     </a>
                 </button>
                 <button>
-                    <a href="https://github.com/dainty92" target="blank">Github
+                    <a href="https://github.com/dainty92" target="blank" rel="noopener noreferrer">Github
                         <i class="fa fa-github"></i>
                     </a>
                 </button>
                 <button>
-                    <a href="https://twitter.com/adexdainty92" target="blank">Twitter
+                    <a href="https://twitter.com/adexdainty92" target="blank" rel="noopener noreferrer">Twitter
                         <i class="fa fa-twitter"></i>
                     </a>
                 </button>
             </div>
         </div>
     </section>
-      
+    
+    <!-- About section with profile information -->
     <section id="about">
         <div class="about-content">
+            <!-- Profile picture, introduction, and skills -->
             <h2>About Me</h2>
             <img src="/images/profile-picture.png" alt="Profile Picture" class="profile-picture">
-            <p>I am a passionate backend developer dedicated to creating robust and scalable systems.</p>
-            <p>My experience spans various backend technologies, including Python, JavaScript, and Node.js. I specialize in designing and implementing APIs, managing databases, and optimizing performance.</p>
-            <p>Equipped with a strong problem-solving mindset and meticulous attention to detail, I thrive on overcoming complex challenges and delivering efficient solutions.</p>
-            <p>I am committed to continuous constantly keeping up with the latest industry trends. Let's collaborate and build exceptional backend solutions!</p>
+            <p>I am a passionate backend developer dedicated to creating robust and scalable systems that power the digital world.</p>
+            <p>My goal is to build technology solutions that not only solve problems but also elevate user experiences. With a strong focus on backend technologies, including Python, JavaScript, and Node.js, I thrive on designing and implementing APIs, managing databases, and optimizing performance.</p>
+            <p>My vision is to contribute to the seamless integration of technology into our lives by crafting innovative and reliable backend solutions. Let's collaborate and bring our visions to life!</p>
             <a href="#contact" class="cta-button">Contact Me</a>
         </div>
     </section>
     
+    <!-- Projects section showcasing projects and their details -->
     <section id="projects">
         <div class="projects-content">
             <h2>Projects</h2>
             <div class="projects-wrapper" id="projects-wrapper">
+                 <!-- Project details, descriptions, and links -->
                 <div class="project">
                     <img src="/images/madam (2).png" alt="Madam" class="project-image">
                     <h3>Madam</h3>
@@ -85,7 +143,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="https://github.com/cappa-team2/madam-food-app-backend/tree/dev" class="cta-button">View Details</a>
+                    <a href="https://github.com/cappa-team2/madam-food-app-backend/tree/dev" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                 <div class="project">
                     <img src="/images/dadjoke.png" alt="Dad Joke" class="project-image">
@@ -106,7 +164,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="https://dad-joke.onrender.com/" class="cta-button">View Details</a>
+                    <a href="https://dad-joke.onrender.com/" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                 <div class="project">
                     <img src="/images/proxy-server.png" alt="Proxy Server Project" class="project-image">
@@ -125,7 +183,7 @@
                         </ul>
                       </div>
                     </div>
-                    <a href="https://weather-proxy-server.onrender.com/api/weather/ikeja" class="cta-button">View Details</a>
+                    <a href="https://weather-proxy-server.onrender.com/api/weather/ikeja" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>                  
                 <div class="project">
                     <img src="/images/joke-cli.png" alt="Joke CLI App" class="project-image">
@@ -144,7 +202,7 @@
                         </ul>
                       </div>
                     </div>
-                    <a href="https://github.com/dainty92/joke-cli-app" class="cta-button">View Details</a>
+                    <a href="https://github.com/dainty92/joke-cli-app" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                   
                 <div class="project">
@@ -154,7 +212,7 @@
                         The To Do List project is a web application that allows users to efficiently manage their tasks and stay organized. 
                         It provides a simple and intuitive interface for creating, editing, and completing tasks.
                     </p>
-                    <a href="https://esther-todolist.netlify.app/" class="cta-button">View Details</a>
+                    <a href="https://esther-todolist.netlify.app/" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                 <div class="project">
                     <img src="/images/udemy.png" alt="Udemy" class="project-image">
@@ -163,7 +221,7 @@
                         The Udemy Clone project is a web application inspired by the popular online learning platform, Udemy. 
                         It is developed using HTML and CSS, resulting in a user interface that closely resembles the original Udemy platform.
                     </p>
-                    <a href="https://esther-udemy.netlify.app/" class="cta-button">View Details</a>
+                    <a href="https://esther-udemy.netlify.app/" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                 <div class="project">
                     <img src="/images/netflix.png" alt="Netflix" class="project-image">
@@ -172,7 +230,7 @@
                         The Netflix Clone project is a web application that replicates the popular streaming platform, Netflix. 
                         It is built using HTML and CSS, providing a user interface that closely resembles the original Netflix platform.
                     </p>
-                    <a href="https://esther-netflix.netlify.app/" class="cta-button">View Details</a>
+                    <a href="https://esther-netflix.netlify.app/" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                 <div class="project">
                     <img src="/images/instagram.png" alt="Instagram" class="project-image">
@@ -181,16 +239,17 @@
                         The Instagram Clone project is a web application that aims to replicate the popular social media platform, Instagram.
                         This clone project strives to recreate the essence of Instagram, providing users with a familiar experience in a different environment.
                     </p>
-                    <a href="https://esther-instagram.netlify.app/" class="cta-button">View Details</a>
+                    <a href="https://esther-instagram.netlify.app/" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                 <div class="project">
                     <img src="/images/lionelmessi.png" alt="Lionel Messi" class="project-image">
                     <h3>Lionel Messi Google Search Page</h3>
                     <p>The Lionel Messi Google Search Page Clone project is a web application that recreates the search interface of the popular search engine, Google, with a focus on the renowned football player, Lionel Messi.</p>
-                    <a href="https://esther-lionel-messi.netlify.app/" class="cta-button">View Details</a>
+                    <a href="https://esther-lionel-messi.netlify.app/" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
             </div>
             <div class="navigation-buttons">
+                <!-- Previous and Next navigation buttons -->
                 <button id="previous-btn" class="navigation-button">Previous</button>
                 <button id="next-btn" class="navigation-button">Next</button>
             </div>
@@ -198,23 +257,27 @@
         </div>
     </section>      
 
+    <!-- Skills section highlighting skills and competencies -->
     <section id="skills">
         <div class="skills-content">
+            <!-- Skills list -->
             <h2>Skills</h2>
             <ul>
-                <li>Programming Languages: <b>HTML, CSS, JavaScript</b></li>
-                <li>Backend Frameworks: <b>Node.js, Express.js</b></li>
-                <li>Database Management: <b>MySQL, MongoDB</b></li>
-                <li>API Development: <b>RESTful APIs</b></li>
-                <li>Version Control: <b>Git, GitHub</b></li>
-                <li>Server Administration: <b>Linux</b></li>
+                <li class="programming-languages"><i class="fa fa-code"></i>Programming Languages: <b>HTML, CSS, JavaScript</b></li>
+                <li class="backend-frameworks"><i class="fa fa-server"></i>Backend Frameworks: <b>Node.js, Express.js</b></li>
+                <li class="database-management"><i class="fa fa-database"></i>Database Management: <b>MySQL, MongoDB</b></li>
+                <li class="api-development"><i class="fa fa-cogs"></i>API Development: <b>RESTful APIs</b></li>
+                <li class="version-control"><i class="fa fa-code-fork"></i>Version Control: <b>Git, GitHub</b></li>
+                <li class="server-administration"><i class="fa fa-linux"></i>Server Administration: <b>Linux</b></li>
                 <!-- Add more skills as needed -->
             </ul>
         </div>
     </section>      
 
+    <!-- Contact section with a form and social links -->
     <section id="contact">
         <div class="contact-content">
+            <!-- Contact form and social media links -->
             <h2>Contact Me</h2>
             <p>If you have any inquiries or would like to discuss potential collaboration opportunities, please feel free to reach out to me using the form below:</p>
           
@@ -231,26 +294,28 @@
             </form>
             <div class="social">
                 <button>
-                    <a href="https://www.linkedin.com/in/esther-mustapha-ajayi/" target="blank">
+                    <a href="https://www.linkedin.com/in/esther-mustapha-ajayi/" target="blank" rel="noopener noreferrer">
                         <i class="fa fa-linkedin-square"></i>
                     </a>
                 </button>
                 <button>
-                    <a href="https://github.com/dainty92" target="blank">
+                    <a href="https://github.com/dainty92" target="blank" rel="noopener noreferrer">
                         <i class="fa fa-github"></i>
                     </a>
                 </button>
                 <button>
-                    <a href="https://twitter.com/adexdainty92" target="blank">
+                    <a href="https://twitter.com/adexdainty92" target="blank" rel="noopener noreferrer">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </button>
             </div>
         </div>
     </section>
-      
+    
+    <!-- Footer with navigation links and copyright information -->
     <footer>
         <nav>
+            <!-- Navigation links -->
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
@@ -262,8 +327,10 @@
         <p>&copy; 2023 Esther Ajayi</p>
     </footer>
 
+    <!-- JavaScript scripts -->
     <script src="main.js"></script>
     <script>
+        // JavaScript code for handling contact form submission
         document.addEventListener("DOMContentLoaded", function() {
             const contactForm = document.getElementById("contact-form");
 
