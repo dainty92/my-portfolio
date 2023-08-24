@@ -51,6 +51,7 @@ ul {
 
 nav a.active {
   color: var(--text-color);
+  background-color: var(--secondary-color);
 }
 
 a {
