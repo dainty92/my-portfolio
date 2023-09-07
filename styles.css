@@ -157,6 +157,12 @@ h1 {
 h2 {
     font-size: 24px;
 }
+
+.hero-content h4 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
   
 p {
     font-size: 14px;
@@ -184,7 +190,6 @@ button:hover {
     position: absolute;
     right: 0;
     display: grid;
-    
 }
 
 .socials button {
@@ -235,6 +240,11 @@ button:hover {
 .profile-picture:hover {
   transform: scale(1.1);
 }
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
   
 /* Projects Section Styles */
 
@@ -262,6 +272,8 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
 }
 
 .project:hover {
@@ -285,6 +297,9 @@ button:hover {
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
+    overflow: hidden; /* Ensures that the animation starts from a clean state */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    animation: typing 2s steps(24) 1s forwards;
 }
   
 .project p {
@@ -500,128 +515,196 @@ footer nav ul li a {
 }
 
 footer p {
-  color: #fff;
+    color: #fff;
+}
+
+/* Define the typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(24) 1s forwards; 
 }
 
 
 @media screen and (max-width: 768px) {
-    /* Adjust the styles for smaller screens */
-    header {
-      padding: 20px;
-      position: relative;
-    }
-
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    nav h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    nav ul li {
-      margin-bottom: 5px;
-    }
-
-    section {
-      padding: 30px;
-    }
-
-    #home {
-      padding: 100px 20px;
-    }
-
-    .hero-content {
-      padding: 0 10px;
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .socials {
-      position: static;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .socials button {
-      padding: 10px;
-    }
-
-    .socials i {
-      margin-right: 5px;
-      font-size: 14px;
-    }
-
-    #about {
-      padding: 50px 20px;
-    }
-
-    .about-content {
-      padding: 0 10px;
-    }
-
-    .profile-picture {
-      width: 150px;
-      height: 150px;
-    }
-
-    #projects {
-      padding: 50px 20px;
-    }
-
-    .projects-wrapper {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .project {
-      margin-bottom: 30px;
-    }
-
-    .navigation-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .navigation-button {
-      margin: 10px 0;
-    }
-
-    #skills {
-      padding: 50px 20px;
-    }
-
-    .skills-content {
-      padding: 0 10px;
-    }
-
-    .skills-content ul {
-      padding-left: 10px;
-    }
-
-    #contact {
-      padding: 50px 20px;
-    }
-
-    .contact-content {
-      padding: 0 10px;
-    }
-
-    .contact-content input,
-    .contact-content textarea {
-      width: 100%;
-    }
-
-    .contact-content .social {
-      margin-top: 30px;
-    }
-
-    footer {
-      padding: 20px;
-    }
+  /* Adjust the styles for smaller screens */
+  header {
+    padding: 20px;
+    position: fixed;
   }
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  nav h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #mobile-menu-button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  } 
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #9C27B0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 40%;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin-bottom: 5px;
+  }
+  
+  section {
+    padding: 30px;
+    min-height: 100vh; /* Set a minimum height of 100vh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #home {
+    padding: 100px 20px;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .socials {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .socials button {
+    padding: 10px;
+  }
+
+  .socials i {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  #about {
+    padding: 50px 20px;
+  }
+
+  .about-content {
+    padding: 0 10px;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  #projects {
+    padding: 50px 20px;
+  }
+
+  .projects-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .project {
+    margin-bottom: 30px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-button {
+    margin: 10px 0;
+  }
+
+  #skills {
+    padding: 50px 20px;
+  }
+
+  .skills-content {
+    padding: 0 10px;
+  }
+
+  .skills-content ul {
+    padding-left: 10px;
+  }
+
+  #contact {
+    padding: 50px 20px;
+  }
+
+  .contact-content {
+    padding: 0 10px;
+  }
+
+  .contact-content input,
+  .contact-content textarea {
+    width: 100%;
+  }
+
+  .contact-content .social {
+    margin-top: 30px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  footer nav ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  footer nav ul li {
+    margin: 0 10px;
+  }
+
+  footer p {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #mobile-menu-button {
+    display: none;
+  }
+}

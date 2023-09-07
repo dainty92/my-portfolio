@@ -62,76 +62,105 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* Contact Form Validation */
 
-    const contactForm = document.getElementById("contact-form");
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
+const contactForm = document.getElementById("contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
 
-    contactForm.addEventListener("submit", function(event) {
-        // Prevent the form from submitting
-        event.preventDefault();
+contactForm.addEventListener("submit", function(event) {
+    // Prevent the form from submitting
+    event.preventDefault();
 
-        // Validate the form inputs
-        if (!validateName() || !validateEmail() || !validateMessage()) {
-            return;
-        }
-
-        // Proceed with form submission
-        submitForm();
-    });
-
-    function validateName() {
-        const nameValue = nameInput.value.trim();
-
-        if (nameValue === "") {
-            displayError("name", "Name is required.");
-            return false;
-        }
-
-        // Check the length of the name
-        if (nameValue.length < 2 || nameValue.length > 50) {
-            displayError("name", "Name should be between 2 and 50 characters.");
-            return false;
-        }
-
-        return true;
+    // Validate the form inputs
+    if (!validateName() || !validateEmail() || !validateMessage()) {
+        return;
     }
 
-    function validateEmail() {
-        const emailValue = emailInput.value.trim();
+    // Proceed with form submission
+    submitForm();
+});
 
-        if (emailValue === "") {
-            displayError("email", "Email is required.");
-            return false;
-        }
+function validateName() {
+    const nameValue = nameInput.value.trim();
 
-        // Simple email format validation
-        const emailRegex = /^\S+@\S+\.\S+$/;
-        if (!emailRegex.test(emailValue)) {
-            displayError("email", "Invalid email format.");
-            return false;
-        }
-
-        return true;
+    if (nameValue === "") {
+        displayError("name", "Name is required.");
+        return false;
     }
 
-    function validateMessage() {
-        const messageValue = messageInput.value.trim();
-
-        if (messageValue === "") {
-            displayError("message", "Message is required.");
-            return false;
-        }
-
-        return true;
+    // Check the length of the name
+    if (nameValue.length < 2 || nameValue.length > 50) {
+        displayError("name", "Name should be between 2 and 50 characters.");
+        return false;
     }
 
-    function displayError(inputName, errorMessage) {
-        const errorElement = document.getElementById(`${inputName}-error`);
-        errorElement.textContent = errorMessage;
+    return true;
+}
+
+function validateEmail() {
+    const emailValue = emailInput.value.trim();
+
+    if (emailValue === "") {
+        displayError("email", "Email is required.");
+        return false;
     }
 
-    function submitForm() {
-        // Proceed with form submission
-        contactForm.submit();
+    // Simple email format validation
+    const emailRegex = /^\S+@\S+\.\S+$/;
+    if (!emailRegex.test(emailValue)) {
+        displayError("email", "Invalid email format.");
+        return false;
     }
+
+    return true;
+}
+
+function validateMessage() {
+    const messageValue = messageInput.value.trim();
+
+    if (messageValue === "") {
+        displayError("message", "Message is required.");
+        return false;
+    }
+
+    return true;
+}
+
+function displayError(inputName, errorMessage) {
+    const errorElement = document.getElementById(`${inputName}-error`);
+    errorElement.textContent = errorMessage;
+}
+
+function submitForm() {
+    // Proceed with form submission
+    contactForm.submit();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get elements that should animate
+    const elementsToAnimate = document.querySelectorAll(".animate-on-load");
+
+    // Function to trigger animations
+    function triggerAnimations() {
+        elementsToAnimate.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.opacity = 1;
+                element.style.transform = "translateY(0)";
+            }, 200 * index); // Adjust the delay as needed
+        });
+    }
+
+    // Trigger animations when the page loads
+    triggerAnimations();
+});
+
+// Get references to the mobile menu button and the navigation links
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const navList = document.querySelector("nav ul");
+
+// Add a click event listener to the mobile menu button
+mobileMenuButton.addEventListener("click", function () {
+    // Toggle the 'active' class on the navigation links
+    navList.classList.toggle("active");
+});
+

@@ -66,23 +66,26 @@
                     </span>
                 </h3>
             </div>
-            <ul>
-                <li id="home-nav"><a href="#home">Home</a></li>
-                <li id="about-nav"><a href="#about">About Me</a></li>
-                <li id="projects-nav"><a href="#projects">Projects</a></li>
-                <li id="skills-nav"><a href="#skills">Skills</a></li>
-                <li id="contact-nav"><a href="#contact">Contact</a></li>
-            </ul>            
+            <div>
+                <button id="mobile-menu-button">☰</button>
+                <ul>
+                    <li id="home-nav"><a href="#home">Home</a></li>
+                    <li id="about-nav"><a href="#about">About Me</a></li>
+                    <li id="projects-nav"><a href="#projects">Projects</a></li>
+                    <li id="skills-nav"><a href="#skills">Skills</a></li>
+                    <li id="contact-nav"><a href="#contact">Contact</a></li>
+                </ul>     
+            </div>       
         </nav>
     </header>
 
     <!-- Hero section with welcome message and CTA -->
-    <section id="home">
+    <section id="home" class="animate-on-load">
         <div class="hero-content">
             <!-- Welcome message, introduction, and call-to-action -->
             <div>
-                <h1>Welcome to My Portfolio</h1>
-                <p>I'm Esther Ajayi, <b>a backend developer.</b></p>
+                <h1 class="typing-animation">Welcome to My Portfolio</h1>
+                <h4>I'm Esther, <b>a software developer.</b></h4>
                 <a href="#projects" class="cta-button">View Projects</a>
             </div>
             <div class="socials">
@@ -110,12 +113,13 @@
     <section id="about">
         <div class="about-content">
             <!-- Profile picture, introduction, and skills -->
-            <h2>About Me</h2>
-            <img src="/images/profile-picture.png" alt="Profile Picture" class="profile-picture">
+            <h2 class="typing-animation">About Me</h2>
+            <img src="/images/profile-picture.png" alt="Profile Picture" class="profile-picture animate-on-click">
             <p>I am a passionate backend developer dedicated to creating robust and scalable systems that power the digital world.</p>
             <p>My goal is to build technology solutions that not only solve problems but also elevate user experiences. With a strong focus on backend technologies, including Python, JavaScript, and Node.js, I thrive on designing and implementing APIs, managing databases, and optimizing performance.</p>
             <p>My vision is to contribute to the seamless integration of technology into our lives by crafting innovative and reliable backend solutions. Let's collaborate and bring our visions to life!</p>
             <a href="#contact" class="cta-button">Contact Me</a>
+            </div>
         </div>
     </section>
     
@@ -146,26 +150,6 @@
                     <a href="https://github.com/cappa-team2/madam-food-app-backend/tree/dev" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
                 </div>
                 <div class="project">
-                    <img src="/images/proxy-server.png" alt="Proxy Server Project" class="project-image">
-                    <h3>Proxy Server</h3>
-                    <div class="project-description">
-                      <p>
-                        The Proxy Server Project is a web application that acts as an intermediary between clients and external APIs, providing a secure and controlled way to fetch data from third-party sources. 
-                        This project showcases my ability to develop backend services and handle API requests.
-                      </p>
-                      <div class="backend-highlights">
-                        <h4>Server Features:</h4>
-                        <ul>
-                          <li>Proxies requests to external weather API for weather information.</li>
-                          <li>Handles error responses from the external API with informative messages.</li>
-                          <li>Utilizes Express.js framework for routing and middleware.</li>
-                          <li>Displays weather information in a user-friendly format using EJS templates.</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="https://weather-proxy-server.onrender.com/api/weather/ikeja" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
-                </div>
-                <div class="project">
                     <img src="/images/random-quote-generator.png" alt="Random Quote Generator Project" class="project-image">
                     <h3>Random Quote Generator</h3>
                     <div class="project-description">
@@ -186,7 +170,27 @@
                         </div>
                     </div>
                     <a href="https://random-quote-now.onrender.com/" class="cta-button cta-projects" target="_blank" rel="noopener noreferrer">View Project</a>
-                </div>                
+                </div>       
+                <div class="project">
+                    <img src="/images/proxy-server.png" alt="Proxy Server Project" class="project-image">
+                    <h3>Proxy Server</h3>
+                    <div class="project-description">
+                      <p>
+                        The Proxy Server Project is a web application that acts as an intermediary between clients and external APIs, providing a secure and controlled way to fetch data from third-party sources. 
+                        This project showcases my ability to develop backend services and handle API requests.
+                      </p>
+                      <div class="backend-highlights">
+                        <h4>Server Features:</h4>
+                        <ul>
+                          <li>Proxies requests to external weather API for weather information.</li>
+                          <li>Handles error responses from the external API with informative messages.</li>
+                          <li>Utilizes Express.js framework for routing and middleware.</li>
+                          <li>Displays weather information in a user-friendly format using EJS templates.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="https://weather-proxy-server.onrender.com/api/weather/ikeja" class="cta-button cta-projects" target="blank" rel="noopener noreferrer">View Details</a>
+                </div>         
                 <div class="project">
                     <img src="/images/url-shortener.png" alt="URL Shortener Project" class="project-image">
                     <h3>URL Shortener</h3>
