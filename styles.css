@@ -132,6 +132,7 @@ section {
     padding: 50px;
     background-color: var(--background-color);
     text-align: center;
+    min-height: 100vh;
 }
 
 /* Hero Section Styles */
@@ -586,7 +587,8 @@ footer p {
   
   section {
     padding: 30px;
-    min-height: 100vh; /* Set a minimum height of 100vh */
+    /* min-height: 100vh;
+    min-width: 100vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
