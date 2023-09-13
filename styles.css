@@ -132,7 +132,7 @@ section {
     padding: 50px;
     background-color: var(--background-color);
     text-align: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 /* Hero Section Styles */
