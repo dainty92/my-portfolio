@@ -164,3 +164,11 @@ mobileMenuButton.addEventListener("click", function () {
     navList.classList.toggle("active");
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const menuIcon = document.getElementById("menu-icon");
+
+    mobileMenuButton.addEventListener("click", function () {
+        menuIcon.textContent = (menuIcon.textContent === "☰") ? "✕" : "☰";
+    });
+});
