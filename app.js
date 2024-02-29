@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 
@@ -62,7 +63,7 @@ transporter.verify(function(error, success) {
 });
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(path.join(__dirname + "index.html"));
 });
 
 app.listen(5000, () => {
