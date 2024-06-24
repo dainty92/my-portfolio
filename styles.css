@@ -556,7 +556,7 @@ footer p {
     border: none;
     cursor: pointer;
     font-size: 24px;
-    margin-left: 50px;
+    margin-left: auto;
   } 
 
   header nav ul {
